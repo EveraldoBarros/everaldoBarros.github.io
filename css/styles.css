@@ -106,7 +106,7 @@
   max-width: 20px;
 }
 
-/* about container */
+/* About container */
 #name {
   font-size: 42px;
   margin-bottom: 15px;
@@ -186,7 +186,7 @@
 }
 
 /* Mobile */
-@media(max-width: 450px) {
+@media (max-width: 450px) {
 
   #container {
     flex-direction: column;
@@ -233,4 +233,10 @@
     font-size: 60px;
   }
 
+}
+
+/* Definindo a imagem de fundo para o ícone do JavaScript */
+.icons8-javascript {
+  background-image: url('C:\Users\4901560816\Desktop\Ano 2024\Cursos\EveraldoBarros.github.io\img\logo\logo-javascript.png');
+  /* Adicione outros estilos conforme necessário */
 }
