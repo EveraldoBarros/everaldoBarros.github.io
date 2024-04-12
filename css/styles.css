@@ -14,6 +14,7 @@
   --bio-bg-color: #1E2A3A;
   --bio-border-color: #293544;
   --about-bg-color: #111821;
+  --logo-size: 50px; /* Definindo o tamanho padrão dos logotipos */
 }
 
 /* General */
@@ -75,7 +76,7 @@
 
 #social-container li {
   flex: 1 1 0;
-  max-width: 60px;
+  max-width: var(--logo-size); /* Usando a variável de tamanho para os ícones sociais */
 }
 
 #social-container li a {
@@ -227,6 +228,9 @@
     max-width: 100%;
     margin-bottom: 40px;
     text-align: left;
+    display: flex; /* Adicionando esta propriedade para permitir que os logos fiquem em linha */
+    justify-content: space-between; /* Adicionando esta propriedade para espaçar uniformemente os logos */
+    align-items: center; /* Adicionando esta propriedade para centralizar verticalmente os logos */
   }
 
   .skills-box i {
@@ -237,6 +241,42 @@
 
 /* Definindo a imagem de fundo para o ícone do JavaScript */
 .icons8-javascript {
-  background-image: url('C:\Users\4901560816\Desktop\Ano 2024\Cursos\EveraldoBarros.github.io\img\logo\logo-javascript.png');
+  background-image: url('C:\\Users\\4901560816\\Desktop\\Ano 2024\\Cursos\\EveraldoBarros.github.io\\img\\logo\\logo-javascript.png');
   /* Adicione outros estilos conforme necessário */
+}
+
+/* Definindo a imagem de fundo para o ícone do C# */
+.logo-c-sharp {
+  background-image: url('C:\\Users\\4901560816\\Desktop\\Ano 2024\\Cursos\\EveraldoBarros.github.io\\img\\logos\\logo-c-sharp.png');
+  /* Adicione outros estilos conforme necessário */
+  width: 45px; /* Defina a largura desejada */
+  height: 45px; /* Defina a altura desejada */
+  background-size: contain; /* Ajusta a imagem para caber dentro do espaço disponível */
+}
+
+/* Definindo a imagem de fundo para o ícone do Visual Studio Code */
+.logo-vscode {
+  background-image: url('caminho/para/o/arquivo-do-logo-vscode.png');
+  /* Adicione outros estilos conforme necessário */
+  width: 45px; /* Defina a largura desejada */
+  height: 45px; /* Defina a altura desejada */
+  background-size: contain; /* Ajusta a imagem para caber dentro do espaço disponível */
+}
+
+/* Definindo a imagem de fundo para o ícone do Robot Framework */
+.logo-robot-framework {
+  background-image: url('caminho/para/o/arquivo-do-logo-robot-framework.png');
+  /* Adicione outros estilos conforme necessário */
+  width: 45px; /* Defina a largura desejada */
+  height: 45px; /* Defina a altura desejada */
+  background-size: contain; /* Ajusta a imagem para caber dentro do espaço disponível */
+}
+
+/* Definindo a imagem de fundo para o ícone das ferramentas de automação */
+.logo-automation-tools {
+  background-image: url('caminho/para/o/arquivo-do-logo-automation-tools.png');
+  /* Adicione outros estilos conforme necessário */
+  width: 45px; /* Defina a largura desejada */
+  height: 45px; /* Defina a altura desejada */
+  background-size: contain; /* Ajusta a imagem para caber dentro do espaço disponível */
 }
