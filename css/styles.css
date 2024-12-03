@@ -1,282 +1,106 @@
-/* Reset */
+/* Reset básico */
 * {
-  padding: 0;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* Variables */
-:root {
-  --main-color: #54B689;
-  --main-text-color: #FFF;
-  --border-color: #999;
-  --bio-bg-color: #1E2A3A;
-  --bio-border-color: #293544;
-  --about-bg-color: #111821;
-  --logo-size: 50px; /* Definindo o tamanho padrão dos logotipos */
+/* Estilo do corpo */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5dc; /* Creme */
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
 }
 
-/* General */
-.highlight {
-  color: var(--main-color);
-}
-
-/* Containers */
-#container {
-  display: flex;
-  flex-direction: row;
-  color: var(--main-text-color);
-}
-
-#bio-container {
-  flex: 1 1 20%;
-  min-height: 100vh;
-  background-color: var(--bio-bg-color);
+/* Cabeçalho */
+header {
+  background-color: #333;
+  color: white;
   text-align: center;
-  padding: 30px 12px;
-  border-right: 5px solid var(--bio-border-color);
+  padding: 15px;
 }
 
-#about-container {
-  flex: 1 1 80%;
-  min-height: 100vh;
-  background-color: var(--about-bg-color);
-  padding: 50px;
-}
-
-/* Bio container */
-#bio-container h2 {
-  margin-bottom: 25px;
-}
-
-#bio-container p {
-  margin-bottom: 20px;
-}
-
-#bio-container #welcome-text {
-  font-weight: bold;
-}
-
-#bio-image {
-  width: 175px;
-  height: 175px;
-  border-radius: 50%;
-  margin-bottom: 25px;
-}
-
-#social-container {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  border-bottom: 1px solid var(--border-color);
-  margin-bottom: 25px;
-  padding-bottom: 25px;
-}
-
-#social-container li {
-  flex: 1 1 0;
-  max-width: var(--logo-size); /* Usando a variável de tamanho para os ícones sociais */
-}
-
-#social-container li a {
-  color: var(--main-color);
-  font-size: 30px;
-}
-
-#email-container {
-  display: flex;
-  justify-content: center;
-}
-
-#email-container ion-icon,
-#email-container a {
-  flex: 1 1 0;
-}
-
-#email-container a {
-  color: var(--main-text-color);
-  text-decoration: none;
-  max-width: 225px;
-}
-
-#email-container ion-icon {
-  color: var(--main-color);
-  font-size: 20px;
-  margin-right: 5px;
-  max-width: 20px;
-}
-
-/* About container */
-#name {
-  font-size: 42px;
-  margin-bottom: 15px;
-}
-
-#title {
+header h1 {
   font-size: 24px;
-  margin-bottom: 15px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
   font-weight: bold;
 }
 
-.description {
-  max-width: 75%;
+/* Biografia */
+aside#bio {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+aside#bio h2 {
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
-#btn-projects {
-  font-weight: bold;
-  font-size: 16px;
-  color: var(--main-text-color);
-  background-color: var(--main-color);
-  border: 2px solid var(--main-color);
-  border-radius: 5px;
-  text-decoration: none;
-  transition: .5s;
-  margin: 25px 0;
-  padding: 12px 10px;
-  width: 150px;
-  text-align: center;
-  display: flex;
+aside#bio img {
+  width: 150px; /* Limita a largura */
+  height: 150px; /* Limita a altura */
+  border-radius: 50%; /* Deixa a imagem redonda */
+  object-fit: cover; /* Garante que a imagem não deforme */
+  margin-bottom: 10px;
 }
 
-#btn-projects ion-icon,
-#btn-projects span {
-  flex: 1 1 0;
-}
-
-#btn-projects ion-icon {
-  font-size: 20px;
-  max-width: 20px;
-}
-
-#btn-projects:hover {
-  background-color: transparent;
-}
-
-#skills-section-title {
-  border-top: 1px solid var(--border-color);
-  padding-top: 20px;
-  margin-bottom: 20px;
-  font-size: 32px;
-}
-
-#skills-container {
+/* Seções principais */
+main {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 25px;
+  gap: 20px;
 }
 
-.skills-box {
-  flex: 1 1 33%;
-  max-width: 33%;
-  margin-bottom: 35px;
+section {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 15px;
 }
 
-.skills-title {
-  font-size: 24px;
-  margin-bottom: 25px;
-  font-weight: bold;
-  padding-left: 10px;
-  border-left: 5px solid var(--main-color);
+section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
-.skills-box i {
-  font-size: 45px;
-  margin-right: 10px;
+/* Lista de habilidades */
+#skills ul {
+  list-style: none;
+  margin-top: 10px;
 }
 
-/* Mobile */
-@media (max-width: 450px) {
-
-  #container {
-    flex-direction: column;
-  }
-
-  #bio-container {
-    min-height: auto;
-    border-right: none;
-    border-bottom: 5px solid var(--bio-border-color);
-  }
-
-  #bio-container h2 {
-    display: none;
-  }
-
-  #bio-container p {
-    max-width: 60%;
-    margin: 10px auto;
-  }
-
-  #about-container {
-    text-align: center;
-    padding: 30px;
-  }
-
-  #about-container .description {
-    margin: 10px auto;
-    max-width: 100%;
-    line-height: 26px;
-  }
-
-  #btn-projects {
-    margin: 20px auto;
-  }
-
-  .skills-box {
-    flex: 1 1 100%;
-    max-width: 100%;
-    margin-bottom: 40px;
-    text-align: left;
-    display: flex; /* Adicionando esta propriedade para permitir que os logos fiquem em linha */
-    justify-content: space-between; /* Adicionando esta propriedade para espaçar uniformemente os logos */
-    align-items: center; /* Adicionando esta propriedade para centralizar verticalmente os logos */
-  }
-
-  .skills-box i {
-    font-size: 60px;
-  }
-
+#skills ul li {
+  margin-bottom: 5px;
 }
 
-/* Definindo a imagem de fundo para o ícone do JavaScript */
-.icons8-javascript {
-  background-image: url('C:\\Users\\4901560816\\Desktop\\Ano 2024\\Cursos\\EveraldoBarros.github.io\\img\\logo\\logo-javascript.png');
-  /* Adicione outros estilos conforme necessário */
-}
-
-/* Definindo a imagem de fundo para o ícone do C# */
-.logo-c-sharp {
-  background-image: url('C:\\Users\\4901560816\\Desktop\\Ano 2024\\Cursos\\EveraldoBarros.github.io\\img\\logos\\logo-c-sharp.png');
-  /* Adicione outros estilos conforme necessário */
-  width: 45px; /* Defina a largura desejada */
-  height: 45px; /* Defina a altura desejada */
-  background-size: contain; /* Ajusta a imagem para caber dentro do espaço disponível */
-}
-
-/* Definindo a imagem de fundo para o ícone do Visual Studio Code */
-.logo-vscode {
-  background-image: url('caminho/para/o/arquivo-do-logo-vscode.png');
-  /* Adicione outros estilos conforme necessário */
-  width: 45px; /* Defina a largura desejada */
-  height: 45px; /* Defina a altura desejada */
-  background-size: contain; /* Ajusta a imagem para caber dentro do espaço disponível */
-}
-
-/* Definindo a imagem de fundo para o ícone do Robot Framework */
-.logo-robot-framework {
-  background-image: url('caminho/para/o/arquivo-do-logo-robot-framework.png');
-  /* Adicione outros estilos conforme necessário */
-  width: 45px; /* Defina a largura desejada */
-  height: 45px; /* Defina a altura desejada */
-  background-size: contain; /* Ajusta a imagem para caber dentro do espaço disponível */
-}
-
-/* Definindo a imagem de fundo para o ícone das ferramentas de automação */
-.logo-automation-tools {
-  background-image: url('caminho/para/o/arquivo-do-logo-automation-tools.png');
-  /* Adicione outros estilos conforme necessário */
-  width: 45px; /* Defina a largura desejada */
-  height: 45px; /* Defina a altura desejada */
-  background-size: contain; /* Ajusta a imagem para caber dentro do espaço disponível */
+/* Rodapé */
+footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
 }
